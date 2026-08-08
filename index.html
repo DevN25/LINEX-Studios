@@ -666,8 +666,8 @@
 
             <div class="container">
                 <div class="testimonial-stage">
-                    <!-- Flank Left Arrow Button -->
-                    <button class="testimonial-nav-btn prev-btn" id="testimonial-prev" aria-label="Previous Testimonial">
+                    <!-- Flank Left Arrow Button (Desktop) -->
+                    <button class="testimonial-nav-btn prev-btn desktop-only-btn" id="testimonial-prev" aria-label="Previous Testimonial">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                     </button>
 
@@ -721,22 +721,30 @@
                         </div>
                     </div>
 
-                    <!-- Flank Right Arrow Button -->
-                    <button class="testimonial-nav-btn next-btn" id="testimonial-next" aria-label="Next Testimonial">
+                    <!-- Flank Right Arrow Button (Desktop) -->
+                    <button class="testimonial-nav-btn next-btn desktop-only-btn" id="testimonial-next" aria-label="Next Testimonial">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
                 </div>
 
-                <!-- 6s Auto-Advance Progress Indicators -->
-                <div class="testimonial-progress-wrap">
-                    <button class="progress-dot active" data-index="0" aria-label="Go to slide 1">
-                        <div class="progress-bar-fill"></div>
+                <!-- 6s Auto-Advance Progress Indicators & Mobile Nav Bar -->
+                <div class="testimonial-controls-bar">
+                    <button class="testimonial-nav-btn prev-btn mobile-nav-btn" aria-label="Previous Testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                     </button>
-                    <button class="progress-dot" data-index="1" aria-label="Go to slide 2">
-                        <div class="progress-bar-fill"></div>
-                    </button>
-                    <button class="progress-dot" data-index="2" aria-label="Go to slide 3">
-                        <div class="progress-bar-fill"></div>
+                    <div class="testimonial-progress-wrap">
+                        <button class="progress-dot active" data-index="0" aria-label="Go to slide 1">
+                            <div class="progress-bar-fill"></div>
+                        </button>
+                        <button class="progress-dot" data-index="1" aria-label="Go to slide 2">
+                            <div class="progress-bar-fill"></div>
+                        </button>
+                        <button class="progress-dot" data-index="2" aria-label="Go to slide 3">
+                            <div class="progress-bar-fill"></div>
+                        </button>
+                    </div>
+                    <button class="testimonial-nav-btn next-btn mobile-nav-btn" aria-label="Next Testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
                 </div>
             </div>

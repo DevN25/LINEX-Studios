@@ -496,16 +496,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }, autoAdvanceDuration);
         }
 
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
+        const prevBtns = document.querySelectorAll('.prev-btn');
+        const nextBtns = document.querySelectorAll('.next-btn');
+
+        prevBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
                 showTestimonial(currentIndex - 1);
             });
-        }
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
+        });
+
+        nextBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
                 showTestimonial(currentIndex + 1);
             });
-        }
+        });
 
         testDots.forEach((dot, i) => {
             dot.addEventListener('click', () => {
