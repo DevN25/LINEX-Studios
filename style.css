@@ -43,8 +43,8 @@ section::after {
   transform: translateX(-50%) scaleY(0.5);
   transform-origin: center bottom;
   height: 1px !important;
-  background: linear-gradient(90deg, transparent 0%, rgba(0, 187, 255, 0.25) 15%, #00bbff 50%, #2bffc9 75%, transparent 100%);
-  opacity: 0.6;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 187, 255, 0.15) 20%, rgba(0, 187, 255, 0.45) 50%, rgba(43, 255, 201, 0.45) 75%, transparent 100%);
+  opacity: 0.25;
   pointer-events: none;
   z-index: 10;
 }
@@ -55,8 +55,8 @@ section::after {
   height: 1px !important;
   transform: scaleY(0.5) !important;
   transform-origin: center center !important;
-  background: linear-gradient(90deg, transparent 0%, rgba(0, 187, 255, 0.25) 15%, #00bbff 50%, #2bffc9 75%, transparent 100%) !important;
-  opacity: 0.6 !important;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 187, 255, 0.15) 20%, rgba(0, 187, 255, 0.45) 50%, rgba(43, 255, 201, 0.45) 75%, transparent 100%) !important;
+  opacity: 0.25 !important;
   position: relative !important;
   left: 50% !important;
   right: 50% !important;
