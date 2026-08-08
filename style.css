@@ -464,7 +464,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.6) 50%, rgba(10, 10, 10, 0.5) 100%);
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.75) 0%, rgba(10, 10, 10, 0.3) 50%, rgba(10, 10, 10, 0.2) 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -505,7 +505,7 @@ section {
   top: 0;
   left: 0;
   pointer-events: none;
-  filter: brightness(0.45) contrast(1.08);
+  filter: brightness(0.72) contrast(1.02);
 }
 
 .hero-content {
