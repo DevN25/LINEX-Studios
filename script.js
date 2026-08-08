@@ -250,38 +250,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 9. Section 5 — Featured Work (Hover Autoplay, Lightbox & Parallax)
-    const workCards = document.querySelectorAll('.work-card');
-    workCards.forEach((card, index) => {
-        const video = card.querySelector('.work-video-bg');
-        
-        // Hover Autoplay (sound-off)
-        card.addEventListener('mouseenter', () => {
-            if (video) {
+    // 9. Section 5 & Section 6 — Video Cards Hover Playback Only (Static on Load)
+    const videoCards = document.querySelectorAll('.work-card, .stat-card');
+    videoCards.forEach((card) => {
+        const video = card.querySelector('.work-video-bg, .stat-video-bg');
+        if (video) {
+            // Ensure static state on load
+            video.pause();
+            
+            // Play on hover
+            card.addEventListener('mouseenter', () => {
                 video.play().catch(() => {});
-            }
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            if (video) {
+            });
+            
+            // Pause and reset on mouseleave
+            card.addEventListener('mouseleave', () => {
                 video.pause();
-            }
-        });
+                video.currentTime = 0;
+            });
+        }
 
-        // Click to Open Full Cinematic Lightbox
-        card.addEventListener('click', () => {
-            const videoSrc = card.getAttribute('data-video');
-            if (lightbox && lightboxPlayer && videoSrc) {
-                const sourceTag = lightboxPlayer.querySelector('source');
-                if (sourceTag) {
-                    sourceTag.src = videoSrc;
-                    lightboxPlayer.load();
+        // Click to Open Full Cinematic Lightbox for work cards
+        if (card.classList.contains('work-card')) {
+            card.addEventListener('click', () => {
+                const videoSrc = card.getAttribute('data-video');
+                if (lightbox && lightboxPlayer && videoSrc) {
+                    const sourceTag = lightboxPlayer.querySelector('source');
+                    if (sourceTag) {
+                        sourceTag.src = videoSrc;
+                        lightboxPlayer.load();
+                    }
+                    lightbox.classList.add('active');
+                    lightboxPlayer.currentTime = 0;
+                    lightboxPlayer.play();
                 }
-                lightbox.classList.add('active');
-                lightboxPlayer.currentTime = 0;
-                lightboxPlayer.play();
-            }
-        });
+            });
+        }
 
         // Smooth entrance reveal using GSAP ScrollTrigger
         gsap.fromTo(card, 
