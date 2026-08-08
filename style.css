@@ -2284,18 +2284,248 @@ section {
   color: var(--accent);
 }
 
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Media Queries (Sections 1 to 14)
+   ========================================================================== */
+
+/* Tablet & Medium Screens (< 992px) */
 @media (max-width: 992px) {
+  .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .cap-card {
+    grid-column: span 1 !important;
+  }
+  .cap-card.bento-wide,
+  .cap-card.bento-medium,
+  .cap-card.bento-narrow {
+    grid-column: span 2 !important;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .work-hero {
+    grid-column: span 2 !important;
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .stat-card {
+    grid-column: span 1 !important;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .founders-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .journal-grid,
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
   }
 }
 
-@media (max-width: 640px) {
+/* Mobile Screens (< 768px) */
+@media (max-width: 768px) {
+  section {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+
+  .section-title {
+    font-size: clamp(28px, 7vw, 36px) !important;
+  }
+
+  /* Section 2 Navbar Header */
+  .site-header {
+    padding: 12px 0 !important;
+  }
+  .site-header .container {
+    padding: 0 16px !important;
+  }
+  .nav-links {
+    display: none !important;
+  }
+  .header-actions .btn {
+    padding: 10px 18px !important;
+    font-size: 13px !important;
+  }
+
+  /* Section 1 Hero & Hero Glass Card */
+  .hero {
+    height: 100dvh !important;
+    min-height: 560px !important;
+    padding: 0 16px !important;
+  }
+  .hero-glass-card {
+    padding: 20px 16px !important;
+    margin: 0 auto !important;
+    width: calc(100% - 16px) !important;
+    border-radius: 18px !important;
+  }
+  .hero h1 {
+    font-size: clamp(26px, 7vw, 38px) !important;
+  }
+  .hero-cta-group {
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  .hero-cta-group .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Section 3 Strategic Thesis */
+  .thesis {
+    padding: 48px 16px !important;
+  }
+  .thesis-headline {
+    font-size: clamp(24px, 6vw, 34px) !important;
+  }
+  .thesis-copy {
+    font-size: 14.5px !important;
+  }
+
+  /* Section 4 Capabilities Bento Grid */
+  .capabilities-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .cap-card,
+  .cap-card.bento-wide,
+  .cap-card.bento-medium,
+  .cap-card.bento-narrow {
+    grid-column: span 1 !important;
+    padding: 20px !important;
+  }
+
+  /* Section 5 Featured Work Grid */
+  .work-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .work-card,
+  .work-hero {
+    grid-column: span 1 !important;
+    height: 320px !important;
+  }
+
+  /* Section 6 Results / Proof Stat Cards */
+  .results-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .stat-card {
+    grid-column: span 1 !important;
+  }
+  .stat-number {
+    font-size: clamp(42px, 9vw, 54px) !important;
+  }
+
+  /* Section 7 System Architecture Process */
+  .process-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Section 8 Why LINEX Comparison Table */
+  .compare-table-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .compare-table {
+    min-width: 640px !important;
+  }
+
+  /* Section 9 Industries Auto-Scroller */
+  .industries-chip {
+    padding: 18px 24px !important;
+    font-size: 14px !important;
+  }
+
+  /* Section 10 Leadership & Founders */
+  .founders-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Section 11 Journal & Section 12 Events */
+  .journal-grid,
+  .events-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Section 13 Final CTA Banner */
+  .final-cta {
+    padding: 48px 16px !important;
+  }
+  .final-cta h2 {
+    font-size: clamp(26px, 6.5vw, 36px) !important;
+  }
+
+  /* Section 14 Mega Footer */
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
   }
   .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+  .footer-newsletter-inline {
+    flex-direction: column !important;
+  }
+  .newsletter-btn {
+    width: 100% !important;
+  }
+
+  /* Project Inquiry Form Modal & Portfolio Vault Modal Mobile Layout */
+  .project-modal-content {
+    width: 94% !important;
+    max-height: 92vh !important;
+    padding: 24px 18px !important;
+  }
+  .form-row {
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+  .portfolio-modal-content {
+    width: 95% !important;
+    padding: 20px 14px !important;
+  }
+  .portfolio-modal-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Small Smartphone Screens (< 480px) */
+@media (max-width: 480px) {
+  .hero-glass-card {
+    padding: 16px 12px !important;
+  }
+  .hero h1 {
+    font-size: 24px !important;
+  }
+  .btn {
+    padding: 12px 20px !important;
+    font-size: 13.5px !important;
   }
 }
