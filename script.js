@@ -1,11 +1,15 @@
 // LINEX Studios - Interactions
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 0. Studio Dual Cursor System
+    // 0. Studio Dual Cursor System (Desktop fine pointers ONLY)
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorRing = document.querySelector('.cursor-ring');
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches || ('ontouchstart' in window) || (window.innerWidth <= 992);
 
-    if (cursorDot && cursorRing) {
+    if (isTouchDevice) {
+        if (cursorDot) cursorDot.style.display = 'none';
+        if (cursorRing) cursorRing.style.display = 'none';
+    } else if (cursorDot && cursorRing) {
         // Dot moves INSTANTLY to mouse coordinates for 100% click point accuracy
         window.addEventListener('mousemove', (e) => {
             gsap.set(cursorDot, { x: e.clientX, y: e.clientY });

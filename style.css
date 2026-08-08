@@ -2288,6 +2288,21 @@ section {
    Comprehensive Mobile & Tablet Responsive Media Queries (Sections 1 to 14)
    ========================================================================== */
 
+/* Disable Custom Dual Cursor on Mobile & Touch Devices */
+@media (max-width: 992px), (hover: none), (pointer: coarse) {
+  *, html, body, a, button, .btn, .social-icon-btn, .work-card, .stat-card, .cap-card {
+    cursor: auto !important;
+  }
+  .cursor-dot,
+  .cursor-ring,
+  .custom-cursor {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
 /* Tablet & Medium Screens (< 992px) */
 @media (max-width: 992px) {
   .container {
