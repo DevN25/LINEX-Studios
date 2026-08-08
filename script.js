@@ -263,10 +263,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 video.play().catch(() => {});
             });
             
-            // Pause and reset on mouseleave
+            // Pause on mouseleave (freezes at current frame)
             card.addEventListener('mouseleave', () => {
                 video.pause();
-                video.currentTime = 0;
             });
         }
 
